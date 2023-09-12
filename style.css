@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* text-align: center; */
+  background-color: rgba(232, 196, 196, 0.137);
+}
+#program{
+  width: 700px;
+  height: 40px;
+  border-color: #0056b3;
+  cursor: pointer;
+}
+.sign-in{
+  display: inline-block;
+  width: 100%;
+  /* background-color: yellowgreen; */
+  height: 50px;
+  margin-left: 30px;
+}
+.nav{
+  height: 100px;
+  background-color: #0056b3;
+  display: inline-flex;
+  width: 100%;
+  
+}
+/* .first-name{
+  display: inline;
+  width: 100%;
+  background-color: yellowgreen;
+  
+} */
+h1 {
+  color: white;
+  /* text-align: center; */
+  font-size: 100px;
+  margin-left: 80px;
+}
+
+form {
+  /* width: 300px; */
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+label, input, select {
+  display: block;
+  margin: 10px 10px 10px 0;
+  width: 500px;
+ 
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  width: 98%;
+  margin-top: 50px;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  
+}
+#attendance-list{
+  display: block; 
+  height: 25px; width:96% ; 
+  /* border: 2px solid orange;  */
+  margin-left: 20px; 
+  margin-top: 20px; 
+  line-height: 25px;
+}
+.direct{
+  width: 25px;
+}

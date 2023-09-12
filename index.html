@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav">
+    <img style="width: 150px; display: inline-flex; margin: 10px; " src="images/pelah-removebg.png" alt="">
+    <h1 style="display: inline-flex;">Attendance Form</h1>
+  </div>
+  <div>
+    <marquee style="margin-top: 10px;" behavior="scroll" direction="left to right">WELCOME TO PELAH ART COLLEGE <img class="direct" src="images/pelah-removebg.png" alt=""></marquee>
+  </div>
+  
+
+  <div class="sign-in">
+    <h3 style="display: inline;">SIGN IN AS:</h3>
+    <select style="display: inline; margin-left: 5px;" name="SIGN IN AS :" id="program">
+      
+    <option value="staff">STAFF</option>
+    <option value="visitor">VISITOR</option>
+  
+    </select>
+  </div>
+  
+    <form id="attendance-form">
+      <div class="first-name">
+        <label style="display: inline; " for="name">FIRST NAME: </label>
+        <input style=" display: inline; height: 100%; padding: 10px;" type="text" id="firstName" name="name" required>
+      </div>
+        <div>
+          <label style="display: inline;" for="name">LAST NAME: <input style="padding: 10px; display: inline; margin-left: 15px;" type="text" id="lastName" name="name" required></label>
+        </div>
+
+        <div>
+          <label style="display: inline;" for="date">Date:</label>
+          <input style="padding: 10px;display: inline;margin-left: 60px;" type="date" id="date" name="date" required>
+        </div>
+        
+      <div>
+        <label style="display: inline;" for="time">Time In: </label>
+        <input style="padding: 10px; display: inline; margin-left: 40px;" type="time" id="time" name="time" required>
+      </div>
+        
+      <!-- <div>
+        <label style="display: inline;" for="time">Time Out: </label>
+        <input style="padding: 10px;display: inline;margin-left: 28px;" type="time" id="time" name="time" required>
+      </div> -->
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="attendance-list">
+        <!-- Attendance data will be displayed here -->
+    </div>
+    <script>
+
+    const form = document.getElementById("attendance-form");
+    const attendanceList = document.getElementById("attendance-list");
+
+    // Event listener for form submission
+    form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get form values
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const tim = document.getElementById("time").value;
+
+    // Create a new attendance record
+    const attendanceRecord = document.createElement("div");
+    attendanceRecord.classList.add("attendance-record");
+    attendanceRecord.innerHTML = `<strong>First Name: </strong> ${firstName}, <strong>Last Name: </strong> ${lastName} <strong>Date: </strong> ${date}, <strong>Time-In: </strong> ${time} <strong>Time-Out: </strong> ${time}`;
+
+    // Append the record to the list
+    attendanceList.appendChild(attendanceRecord);
+
+    // Clear the form
+    form.reset();
+});
+
+    </script>
+</body>
+</html>
